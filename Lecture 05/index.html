@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    하노이의 탑.<br>
+    <button type="reset">
+        초기화
+    </button>
+    <div style = "position: fixed; left: 0x; width: 150px;height : 300px;border : 1px solid red; font-size: 3pt; text-align: center;">
+        <p>
+            <script>
+                var a,b;
+        
+                for(a=8;a>0;a--){
+                    for(b=0;b<(a * 2);b++)
+                    {document.write("&#9642");
+                }
+                document.write("<br>")
+                }
+                </script>
+        </p>
+    </div>
+    <div style="position: absolute; left: 400px; width: 150px; height: 300px; border: 1px solid green;text-align: center;">
+        <p>second</p>
+    </div>
+    <div style="position: fixed; right: 300px; width: 150px; height: 300px; border: 1px solid blue;"></div>
+</body>
+</html>
