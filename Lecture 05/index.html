@@ -2,31 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하노이의 탑</title>
+
+    <script src="Hanoi.js"></script>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
+<style>
+    .sq{ visibility: hidden;}
+</style>
+
 <body>
-    하노이의 탑.<br>
-    <button type="reset">
-        초기화
-    </button>
-    <div style = "position: fixed; left: 0x; width: 150px;height : 300px;border : 1px solid red; font-size: 3pt; text-align: center;">
-        <p>
-            <script>
-                var a,b;
-        
-                for(a=8;a>0;a--){
-                    for(b=0;b<(a * 2);b++)
-                    {document.write("&#9642");
-                }
-                document.write("<br>")
-                }
-                </script>
-        </p>
+    <p>하노이의 탑</p>
+
+    <input id="button_reset" type="button" value="초기화" onclick="Click()" >
+
+    <div class="boxs">
+        <div class="firstbox">
+            first
+            <div class="sq">
+                <div id="Rsq">
+                <div style="margin: auto; margin-top: 3%;
+                 margin-bottom: 3%; text-align: center;">
+                    🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
+                </div>
+                </div>
+                <div id="Ysq">
+                <div style="margin: auto; margin-top: 3%;
+                 margin-bottom: 3%; text-align: center;">
+                    🟨🟨🟨🟨🟨🟨🟨🟨🟨
+                </div>
+                </div>
+                <div id="Gsq">
+                    <div style="margin: auto; margin-top: 3%;
+                     margin-bottom: 3%; text-align: center;">
+                    🟩🟩🟩🟩🟩🟩🟩
+                </div>
+                </div>
+                <div id="Bsq">
+                    <div style="margin: auto; margin-top: 3%;
+                     margin-bottom: 3%; text-align: center;">
+                    🟦🟦🟦🟦🟦
+                </div>
+                </div>
+                <div id="Psq">
+                    <div style="margin: auto; margin-top: 3%;
+                    margin-bottom: 3%; text-align: center;">
+                    🟪🟪🟪
+                </div>
+                </div> 
+                <div id="Lsq">
+                    <div style="margin: auto; margin-top: 3%;
+                    margin-bottom: 3%; text-align: center;">
+                    ⬛
+                </div>
+                </div> 
+            </div>
+        </div>
+        <div class="secondbox">second</div>
+        <div class="thirdbox">third</div>
     </div>
-    <div style="position: absolute; left: 400px; width: 150px; height: 300px; border: 1px solid green;text-align: center;">
-        <p>second</p>
-    </div>
-    <div style="position: fixed; right: 300px; width: 150px; height: 300px; border: 1px solid blue;"></div>
+
 </body>
 </html>
