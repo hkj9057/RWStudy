@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하노이의 탑</title>
 
-    <script src="Hanoi.js"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <style>
-    .sq{ visibility: hidden;}
+    
 </style>
 
 <body>
@@ -20,52 +19,21 @@
 
     <input id="button_reset" type="button" value="초기화" onclick="Click()" >
 
-    <div class="boxs">
         <div class="firstbox">
-            first
-            <div class="sq">
-                <div id="Rsq">
-                <div style="margin: auto; margin-top: 3%;
-                 margin-bottom: 3%; text-align: center;">
-                    🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-
-                </div>
-                </div>
-                <div id="Ysq">
-                <div style="margin: auto; margin-top: 3%;
-                 margin-bottom: 3%; text-align: center;">
-                    🟨🟨🟨🟨🟨🟨🟨🟨🟨
-                </div>
-                </div>
-                <div id="Gsq">
-                    <div style="margin: auto; margin-top: 3%;
-                     margin-bottom: 3%; text-align: center;">
-                    🟩🟩🟩🟩🟩🟩🟩
-                </div>
-                </div>
-                <div id="Bsq">
-                    <div style="margin: auto; margin-top: 3%;
-                     margin-bottom: 3%; text-align: center;">
-                    🟦🟦🟦🟦🟦
-                </div>
-                </div>
-                <div id="Psq">
-                    <div style="margin: auto; margin-top: 3%;
-                    margin-bottom: 3%; text-align: center;">
-                    🟪🟪🟪
-                </div>
-                </div> 
-                <div id="Lsq">
-                    <div style="margin: auto; margin-top: 3%;
-                    margin-bottom: 3%; text-align: center;">
-                    ⬛
-                </div>
-                </div> 
-            </div>
+            firsts
+            <div id="arraydiv4" class="basicbox" onclick="firstboxmove()"></div>
+        </div> 
+        <div class="secondbox">
+            second
+            <div id="arraydiv5" class="basicbox"></div>
         </div>
-        <div class="secondbox">second</div>
-        <div class="thirdbox">third</div>
+        <div class="thirdbox">
+            third
+            <div id="arraydiv6" class="basicbox"></div>
+        </div>
+        
     </div>
+    <script src="Hanoi.js"></script>
 
 </body>
 </html>
