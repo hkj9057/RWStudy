@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하노이의 탑</title>
-
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,19 +15,19 @@
 <body>
     <p>하노이의 탑</p>
 
-    <input id="button_reset" type="button" value="초기화" onclick="Click()" >
+    <input type="button" value="초기화" onclick="Init()" >
 
-        <div class="firstbox">
-            firsts
-            <div id="arraydiv4" class="basicbox" onclick="firstboxmove()"></div>
+        <div class="firstSpace" onclick="ClickFirstBox()">
+            first
+            <div id="firstBox" class="basicSpace"></div>
         </div> 
-        <div class="secondbox">
+        <div class="secondSpace" onclick="ClickSecondBox()">
             second
-            <div id="arraydiv5" class="basicbox"></div>
+            <div id="secondBox" class="basicSpace"></div>
         </div>
-        <div class="thirdbox">
+        <div class="thirdSpace" onclick="ClickThirdBox()">
             third
-            <div id="arraydiv6" class="basicbox"></div>
+            <div id="thirdBox" class="basicSpace"></div>
         </div>
         
     </div>

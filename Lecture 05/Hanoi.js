@@ -1,47 +1,163 @@
-var arraydiv1 = new Array();
-var arraydiv2 = new Array();
-var arraydiv3 = new Array();
-var arraydiv4 = document.getElementById("arraydiv4");
-var arraydiv5 = document.getElementById('arraydiv5');
-var arraydiv6 = document.getElementById('arraydiv6');
-var i;
+var firstBox = document.getElementById("firstBox");
+var secondBox = document.getElementById('secondBox');
+var thirdBox = document.getElementById('thirdBox');
+var firstArray = [];
+var secondArray = [];
+var thirdArray = [];
+var checkArray;
 
-arraydiv1.push(document.createTextNode("🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥"));
-arraydiv1.push(document.createTextNode("🟨🟨🟨🟨🟨🟨🟨🟨🟨"));
-arraydiv1.push(document.createTextNode("🟩🟩🟩🟩🟩🟩🟩"));
-arraydiv1.push(document.createTextNode("🟦🟦🟦🟦🟦"));
-arraydiv1.push(document.createTextNode("🟪🟪🟪"));
-arraydiv1.push(document.createTextNode("⬛"));
 
-function basicrender(a, b)
+function Init()
 {
-    a.appendChild(arraydiv1[i]); 
-    b.appendChild(document.createElement('br'));
-        
-}
+    firstArray.length = 0;
+    secondArray.length = 0;
+    thirdArray.length = 0;
 
-for (i = 0; i < 6; i++) {
-    basicrender(arraydiv1)
+    firstArray.push(document.createTextNode("🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥"));
+    firstArray.push(document.createTextNode("🟨🟨🟨🟨🟨🟨🟨🟨🟨"));
+    firstArray.push(document.createTextNode("🟩🟩🟩🟩🟩🟩🟩"));
+    firstArray.push(document.createTextNode("🟦🟦🟦🟦🟦"));
+    firstArray.push(document.createTextNode("🟪🟪🟪"));
+    firstArray.push(document.createTextNode("⬛"));
     
+    console.log(firstArray.lenth);
+    console.log(secondArray.lenth);
+    Draw();
 }
-arraydiv4.appendChild(arraydiv1[0]); 
-    arraydiv4.appendChild(document.createElement('br'));
-    arraydiv4.appendChild(arraydiv1[1]); 
-    arraydiv4.appendChild(document.createElement('br'));
-    arraydiv4.appendChild(arraydiv1[2]); 
-    arraydiv4.appendChild(document.createElement('br'));
-    arraydiv4.appendChild(arraydiv1[3]); 
-    arraydiv4.appendChild(document.createElement('br'));
-    arraydiv4.appendChild(arraydiv1[4]); 
-    arraydiv4.appendChild(document.createElement('br'));
-    arraydiv4.appendChild(arraydiv1[5]); 
-   
-
-
-function firstboxmove()
+function Draw()
 {
-    arraydiv2.push(arraydiv1[5]);
-    arraydiv5.appendChild(arraydiv2[0]);
+    while(firstBox.firstChild)
+        firstBox.removeChild(firstBox.firstChild);
+
+    while(secondBox.firstChild)
+        secondBox.removeChild(secondBox.firstChild);
+
+    while(thirdBox.firstChild)
+        thirdBox.removeChild(thirdBox.firstChild);
+
+    for(var i = 0; i < firstArray.length; i++)
+    {
+        firstBox.appendChild(firstArray[i]);
+        firstBox.appendChild(document.createElement('br'));
+    }
+
+    for(var i = 0; i < secondArray.length; i++)
+    {
+        secondBox.appendChild(secondArray[i]);
+        secondBox.appendChild(document.createElement('br'));
+    }
+
+    for(var i = 0; i < thirdArray.length; i++)
+    {
+        thirdBox.appendChild(thirdArray[i]);
+        thirdBox.appendChild(document.createElement('br'));
+    }
 }
-
-
+function ClickFirstBox()
+{
+ 
+    if(checkArray != null)
+    {
+        if(checkArray == firstArray)
+        {
+            alert("이미 선택")
+        }
+        else
+        {
+            if(firstArray.length == 0 || firstArray[firstArray.length - 1].length >
+                 checkArray[checkArray.length - 1].length)
+            {
+                firstArray.push(checkArray.pop());
+                checkArray = null;
+                Draw();
+            }
+            else
+            {
+                alert("잘못선택")
+                checkArray = null;
+            }
+        }
+    }
+    else
+    {
+        if(firstArray.length > 0)
+        {
+            checkArray = firstArray;
+        }
+        else
+            alert("비어있")
+    }
+            
+}
+function ClickSecondBox()
+{
+ 
+    if(checkArray != null)
+    {
+        if(checkArray == secondArray)
+        {
+            alert("이미선택")
+        }
+        else
+        {
+            if(secondArray.length == 0 || secondArray[secondArray.length - 1].length >
+                 checkArray[checkArray.length - 1].length)
+            {
+                secondArray.push(checkArray.pop());
+                checkArray = null;
+                Draw();
+            }
+            else
+            {
+                alert("잘못선택")
+                checkArray = null;
+            }
+        }
+    }
+    else
+    {
+        if(sceondArray.length > 0)
+        {
+            checkArray = secondArray;
+        }
+        else
+            alert("비어")
+    }
+            
+}
+function ClickThirdBox()
+{
+ 
+    if(checkArray != null)
+    {
+        if(checkArray == thridArray)
+        {
+            alert("이미선택")
+        }
+        else
+        {
+            if(thirdArray.length == 0 || thirdArray[thirdArray.length - 1].length >
+                 checkArray[checkArray.length - 1].length)
+            {
+                thirdArray.push(checkArray.pop());
+                checkArray = null;
+                Draw();
+            }
+            else
+            {
+                alert("잘못선택")
+                checkArray = null;
+            }
+        }
+    }
+    else
+    {
+        if(thirdArray.length > 0)
+        {
+            checkArray = thirdArray;
+        }
+        else
+            alert("비어있")
+    }
+            
+}
