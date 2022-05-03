@@ -60,7 +60,7 @@ function ClickFirstBox()
     {
         if(checkArray == firstArray)
         {
-            alert("이미 선택")
+            alert("x")
         }
         else
         {
@@ -73,7 +73,7 @@ function ClickFirstBox()
             }
             else
             {
-                alert("잘못선택")
+                alert("x")
                 checkArray = null;
             }
         }
@@ -85,9 +85,8 @@ function ClickFirstBox()
             checkArray = firstArray;
         }
         else
-            alert("비어있")
-    }
-            
+            alert("x")
+    } 
 }
 function ClickSecondBox()
 {
@@ -96,7 +95,7 @@ function ClickSecondBox()
     {
         if(checkArray == secondArray)
         {
-            alert("이미선택")
+            alert("x")
         }
         else
         {
@@ -109,7 +108,7 @@ function ClickSecondBox()
             }
             else
             {
-                alert("잘못선택")
+                alert("x")
                 checkArray = null;
             }
         }
@@ -121,9 +120,8 @@ function ClickSecondBox()
             checkArray = secondArray;
         }
         else
-            alert("비어")
+            alert("x")
     }
-            
 }
 function ClickThirdBox()
 {
@@ -132,7 +130,7 @@ function ClickThirdBox()
     {
         if(checkArray == thridArray)
         {
-            alert("이미선택")
+            alert("x")
         }
         else
         {
@@ -145,7 +143,7 @@ function ClickThirdBox()
             }
             else
             {
-                alert("잘못선택")
+                alert("x")
                 checkArray = null;
             }
         }
@@ -157,7 +155,7 @@ function ClickThirdBox()
             checkArray = thirdArray;
         }
         else
-            alert("비어있")
+            alert("x")
     }
             
 }
