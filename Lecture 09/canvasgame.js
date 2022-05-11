@@ -13,7 +13,7 @@ context.closePath()
 
 context.fillStyle = 'blue'
 context.fill() //그리기(색체움)*/
-class player
+/*class player
 {
     constructor(x,y,radius,color)
     {
@@ -58,6 +58,35 @@ function InChul(event)
 
 var p =new player(400,400,30,'pink');
 
-p.draw();
+p.draw();*/
+
+class player
+{
+    constructor(x,y,radius,color)
+    {
+        this.pos_x = x;
+        this.pos_y = y;
+        this.radius = radius;
+        this.color = color;
+    }
+
+    draw()
+    {
+        context.beginPath()
+
+        context.arc(this.pos_x,this.pos_y,this.radius,0,2*Math.PI)
+        context.fillStyle = this.color
+        context.fill()
+    }
+}
 
 
+var fps = 60;
+setInterval(render,1000/fps);
+var p = new player(canvas.width/2, canvas.height/2, 20, 'yellow')
+
+
+function render()
+{
+    context.clearRect(0,0, canvas.width, canvas.height);
+}
